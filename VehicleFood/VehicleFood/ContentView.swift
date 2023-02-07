@@ -17,34 +17,40 @@ struct ContentView: View {
     @State var dx = CGFloat(0)
     @State var dy = CGFloat(0)
     
-    @State var rectPos = CGPoint(x: UIScreen.screenWidth/4, y: UIScreen.screenHeight/4)
-    @State var rectSize = CGFloat(20)
+    @State var sharkPos = CGPoint(x: UIScreen.screenWidth/4, y: UIScreen.screenHeight/6)
+    @State var sharkSize = CGFloat(60)
     
-    @State var circPos = CGPoint(x: UIScreen.screenWidth/2, y: UIScreen.screenHeight/3)
-    @State var circSize = CGFloat(15)
+    @State var fishPos = CGPoint(x: UIScreen.screenWidth/2, y: UIScreen.screenHeight/3)
+    @State var fishSize = CGFloat(40)
     
     
     var body: some View {
         GeometryReader{ geo in
            ZStack {
-                Text(String(points))
-                    .bold()
-                    .padding(20)
-                    .foregroundColor(.purple)
-                Circle()
-                    .frame(width: circSize)
-                    .position(circPos)
-                Rectangle()
-                    .frame(width: rectSize, height: rectSize)
-                    .position(rectPos)
-                    .foregroundColor(.pink)
-               Text(String(points))
+               Text("Pontos: " + String(points))
                    .bold()
+                   .fontWeight(Font.Weight.heavy)
                    .padding(20)
-                   .foregroundColor(.purple)
-                   .position(CGPoint(x: screenWidth/2, y: 30))
-
-            }
+                   .foregroundColor(.black)
+                   .position(CGPoint(x: screenWidth/2, y: 70))
+               Image("Fish")
+                   .resizable()
+                   .aspectRatio(contentMode: .fill)
+                   .frame(width: self.fishSize, height: self.fishSize)
+                   .position(self.fishPos)
+                Image("Shark")
+                   .resizable()
+                   .aspectRatio(contentMode: .fill)
+                   .frame(width: self.sharkSize, height: self.sharkSize)
+                   .position(self.sharkPos)
+               
+           }
+           .background(
+                Image("Ocean")
+                    .resizable()
+                    .ignoresSafeArea(.all)
+                    .aspectRatio(contentMode: .fill)
+           )
             .frame(width: geo.size.width, height: geo.size.height)
             .onReceive(self.timer){ _ in
                 self.screenWidth = geo.size.width
@@ -55,31 +61,36 @@ struct ContentView: View {
         .edgesIgnoringSafeArea(.all)
 }
     func gameControl(){
+        MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "Jaws")
         self.colisionChecker()
         self.parametersCalculator()
-        self.rectMove()
+        self.sharkMove()
         
         }
     
     func parametersCalculator(){
-        self.dx = self.circPos.x - self.rectPos.x
-        self.dy = self.circPos.y - self.rectPos.y
+        self.dx = self.fishPos.x - self.sharkPos.x
+        self.dy = self.fishPos.y - self.sharkPos.y
     }
-    func rectMove(){
+    
+    func sharkMove(){
             withAnimation{
-                self.rectPos.x += dx*0.1
-                self.rectPos.y += dy*0.1
+                self.sharkPos.x += dx*0.15
+                self.sharkPos.y += dy*0.15
+                self.sharkSize += 3
             }
         }
+    
     func colisionChecker(){
-        if(abs(self.circPos.x - self.rectPos.x) < 10 && abs(self.circPos.y - self.rectPos.y) < 10){
+        if(abs(self.fishPos.x - self.sharkPos.x) < 15 && abs(self.fishPos.y - self.sharkPos.y) < 15){
+            HapticManager.instance.impact(style: .heavy)
             withAnimation(){
-                self.rectSize += 5
+                self.sharkSize += 5
             }
             self.points += 1
-            self.rectPos = CGPoint(x: UIScreen.screenWidth/4, y: UIScreen.screenHeight/4)
-            self.rectSize = CGFloat(20)
-            self.circPos = CGPoint(x: Double.random(in: 5.0 ... (screenWidth-15)), y: Double.random(in: 5.0 ... (screenHeight-15)))
+            self.sharkPos = CGPoint(x: UIScreen.screenWidth/4, y: UIScreen.screenHeight/6)
+            self.sharkSize = CGFloat(60)
+            self.fishPos = CGPoint(x: Double.random(in: 5.0 ... (screenWidth-15)), y: Double.random(in: 5.0 ... (screenHeight-15)))
         }
     }
     }

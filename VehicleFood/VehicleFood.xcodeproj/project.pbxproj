@@ -11,6 +11,9 @@
 		44E5D6272991CC7F00F85AC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5D6262991CC7F00F85AC5 /* ContentView.swift */; };
 		44E5D6292991CC8100F85AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44E5D6282991CC8100F85AC5 /* Assets.xcassets */; };
 		44E5D62C2991CC8100F85AC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44E5D62B2991CC8100F85AC5 /* Preview Assets.xcassets */; };
+		44E5D6352992701100F85AC5 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5D6342992701100F85AC5 /* Haptics.swift */; };
+		44E5D638299270A800F85AC5 /* Jaws.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44E5D637299270A800F85AC5 /* Jaws.mp3 */; };
+		44E5D63A299270E500F85AC5 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5D639299270E500F85AC5 /* MusicPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		44E5D6262991CC7F00F85AC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		44E5D6282991CC8100F85AC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44E5D62B2991CC8100F85AC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		44E5D6342992701100F85AC5 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		44E5D637299270A800F85AC5 /* Jaws.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Jaws.mp3; sourceTree = "<group>"; };
+		44E5D639299270E500F85AC5 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 		44E5D6232991CC7F00F85AC5 /* VehicleFood */ = {
 			isa = PBXGroup;
 			children = (
+				44E5D6362992704400F85AC5 /* Sounds */,
 				44E5D6322991CE7100F85AC5 /* Components */,
 				44E5D6242991CC7F00F85AC5 /* VehicleFoodApp.swift */,
 				44E5D6262991CC7F00F85AC5 /* ContentView.swift */,
@@ -71,8 +78,18 @@
 		44E5D6322991CE7100F85AC5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				44E5D6342992701100F85AC5 /* Haptics.swift */,
+				44E5D639299270E500F85AC5 /* MusicPlayer.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		44E5D6362992704400F85AC5 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				44E5D637299270A800F85AC5 /* Jaws.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E5D638299270A800F85AC5 /* Jaws.mp3 in Resources */,
 				44E5D62C2991CC8100F85AC5 /* Preview Assets.xcassets in Resources */,
 				44E5D6292991CC8100F85AC5 /* Assets.xcassets in Resources */,
 			);
@@ -145,7 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E5D6352992701100F85AC5 /* Haptics.swift in Sources */,
 				44E5D6272991CC7F00F85AC5 /* ContentView.swift in Sources */,
+				44E5D63A299270E500F85AC5 /* MusicPlayer.swift in Sources */,
 				44E5D6252991CC7F00F85AC5 /* VehicleFoodApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
