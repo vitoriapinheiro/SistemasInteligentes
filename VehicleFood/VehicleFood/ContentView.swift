@@ -89,10 +89,9 @@ struct ContentView: View {
         if(abs(self.fishPos.x - self.sharkPos.x) < 15 && abs(self.fishPos.y - self.sharkPos.y) < 15){
             HapticManager.instance.impact(style: .heavy)
             withAnimation(){
-                self.sharkSize += 5
+                self.sharkSize += 1
             }
             self.points += 1
-            self.sharkPos = CGPoint(x: UIScreen.screenWidth/4, y: UIScreen.screenHeight/6)
             self.sharkSize = CGFloat(60)
             self.fishPos = CGPoint(x: Double.random(in: 5.0 ... (screenWidth-15)), y: Double.random(in: 5.0 ... (screenHeight-15)))
         }
