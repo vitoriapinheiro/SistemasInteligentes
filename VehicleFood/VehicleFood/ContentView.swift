@@ -13,6 +13,7 @@ struct ContentView: View {
     @State var screenHeight = CGFloat(0)
     
     @State var points = 0
+    @State var started = false
     
     @State var dx = CGFloat(0)
     @State var dy = CGFloat(0)
@@ -61,7 +62,10 @@ struct ContentView: View {
         .edgesIgnoringSafeArea(.all)
 }
     func gameControl(){
-        MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "Jaws")
+        if(!started){
+            MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "Jaws")
+            self.started = true
+        }
         self.colisionChecker()
         self.parametersCalculator()
         self.sharkMove()
