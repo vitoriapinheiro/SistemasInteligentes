@@ -2,12 +2,12 @@
 //  ColectFood.swift
 //  VehicleFood
 //
-//  Created by vivi on 19/02/23.
+//  Created by vivi on 15/02/23.
 //
 
 import SwiftUI
 
-struct EcosystemView: View {
+struct ColectFoodView: View {
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State var screenWidth = CGFloat(0)
     @State var screenHeight = CGFloat(0)
@@ -63,7 +63,7 @@ struct EcosystemView: View {
     }
     func gameControl(){
         if(!started){
-            MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "Jaws")
+//            MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "Jaws")
             self.started = true
         }
         self.colisionChecker()

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4414E1ED29A698D500A7BFFF /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414E1EC29A698D500A7BFFF /* AppButton.swift */; };
+		4414E1F029A6992400A7BFFF /* ColectFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414E1EF29A6992400A7BFFF /* ColectFoodView.swift */; };
+		4414E1F229A6993000A7BFFF /* SearchFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414E1F129A6993000A7BFFF /* SearchFoodView.swift */; };
+		4414E1F429A6997300A7BFFF /* EcosystemVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414E1F329A6997300A7BFFF /* EcosystemVIew.swift */; };
+		4414E1F629A6998700A7BFFF /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414E1F529A6998700A7BFFF /* MenuView.swift */; };
 		44E5D6252991CC7F00F85AC5 /* VehicleFoodApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5D6242991CC7F00F85AC5 /* VehicleFoodApp.swift */; };
 		44E5D6272991CC7F00F85AC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5D6262991CC7F00F85AC5 /* ContentView.swift */; };
 		44E5D6292991CC8100F85AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44E5D6282991CC8100F85AC5 /* Assets.xcassets */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4414E1EC29A698D500A7BFFF /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
+		4414E1EF29A6992400A7BFFF /* ColectFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColectFoodView.swift; sourceTree = "<group>"; };
+		4414E1F129A6993000A7BFFF /* SearchFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFoodView.swift; sourceTree = "<group>"; };
+		4414E1F329A6997300A7BFFF /* EcosystemVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcosystemVIew.swift; sourceTree = "<group>"; };
+		4414E1F529A6998700A7BFFF /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		44E5D6212991CC7F00F85AC5 /* VehicleFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VehicleFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E5D6242991CC7F00F85AC5 /* VehicleFoodApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleFoodApp.swift; sourceTree = "<group>"; };
 		44E5D6262991CC7F00F85AC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +48,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4414E1EE29A698E700A7BFFF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4414E1EF29A6992400A7BFFF /* ColectFoodView.swift */,
+				4414E1F129A6993000A7BFFF /* SearchFoodView.swift */,
+				4414E1F329A6997300A7BFFF /* EcosystemVIew.swift */,
+				4414E1F529A6998700A7BFFF /* MenuView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		44E5D6182991CC7F00F85AC5 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +78,7 @@
 		44E5D6232991CC7F00F85AC5 /* VehicleFood */ = {
 			isa = PBXGroup;
 			children = (
+				4414E1EE29A698E700A7BFFF /* Views */,
 				44E5D6362992704400F85AC5 /* Sounds */,
 				44E5D6322991CE7100F85AC5 /* Components */,
 				44E5D6242991CC7F00F85AC5 /* VehicleFoodApp.swift */,
@@ -80,6 +102,7 @@
 			children = (
 				44E5D6342992701100F85AC5 /* Haptics.swift */,
 				44E5D639299270E500F85AC5 /* MusicPlayer.swift */,
+				4414E1EC29A698D500A7BFFF /* AppButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -165,8 +188,13 @@
 			files = (
 				44E5D6352992701100F85AC5 /* Haptics.swift in Sources */,
 				44E5D6272991CC7F00F85AC5 /* ContentView.swift in Sources */,
+				4414E1F229A6993000A7BFFF /* SearchFoodView.swift in Sources */,
 				44E5D63A299270E500F85AC5 /* MusicPlayer.swift in Sources */,
 				44E5D6252991CC7F00F85AC5 /* VehicleFoodApp.swift in Sources */,
+				4414E1ED29A698D500A7BFFF /* AppButton.swift in Sources */,
+				4414E1F629A6998700A7BFFF /* MenuView.swift in Sources */,
+				4414E1F429A6997300A7BFFF /* EcosystemVIew.swift in Sources */,
+				4414E1F029A6992400A7BFFF /* ColectFoodView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
